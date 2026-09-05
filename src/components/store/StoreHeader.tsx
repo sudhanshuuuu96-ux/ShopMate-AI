@@ -12,6 +12,7 @@ import {
   Sun,
   Moon,
   Columns3,
+  Video,
 } from 'lucide-react';
 import { useStore } from '@/context/StoreContext';
 import { formatINR } from '@/lib/utils';
@@ -117,6 +118,17 @@ export function StoreHeader() {
             >
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
               <span>AI Audit Ledger</span>
+            </Link>
+            <Link
+              href="/presentation"
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                pathname.startsWith('/presentation')
+                  ? 'bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm'
+                  : 'text-rose-600 dark:text-rose-400 hover:text-rose-700 dark:hover:text-rose-300'
+              }`}
+            >
+              <Video className="w-3.5 h-3.5" />
+              <span>7-Min Video Studio</span>
             </Link>
           </nav>
 
